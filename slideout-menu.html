@@ -63,8 +63,26 @@
         side: this.side
       });
     },
+    open: function () {
+      this.slideout.open();
+    },
+    close: function () {
+      this.slideout.close();
+    },
     toggle: function () {
       this.slideout.toggle();
+    },
+    isOpen: function () {
+      return this.slideout.isOpen();
+    },
+    destroy: function () {
+      this.slideout.destroy();
+    },
+    enableTouch: function () {
+      this.slideout.enableTouch();
+    },
+    disableTouch: function () {
+      this.slideout.disableTouch();
     }
   });
 </script>
