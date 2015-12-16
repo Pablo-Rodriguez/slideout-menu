@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>slideout-menu demo</title>
+  <link rel="import" href="../slideout-menu.html">
+</head>
+<body>
+  <slideout-menu padding="200">
+    <nav class="menu">
+      <header>
+        <h2>Menu</h2>
+      </header>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="panel">
+      <header>
+        <button class="toggle-button">CLICK</button>
+        <h2>Main</he>
+      </header>
+    </main>
+
+  </slideout-menu>
+
+  <script>
+    var menu = document.querySelector('slideout-menu');
+    document.querySelector('.toggle-button').addEventListener('click', function () {
+      menu.toggle();
+    });
+  </script>
+
+</body>
+</html>
