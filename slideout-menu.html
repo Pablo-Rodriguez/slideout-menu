@@ -1,0 +1,70 @@
+<link rel="import" href="../polymer/polymer.html">
+<script src="../slideout.js/dist/slideout.min.js"></script>
+<link rel="stylesheet" href="../slideout.js/index.css">
+
+<dom-module id="slideout-menu">
+  <style>
+    :host {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+  <template>
+    <content id="menu" select=".menu"></content>
+    <content id="panel" select=".panel"></content>
+  </template>
+</dom-module>
+
+<script>
+  Polymer({
+    is: 'slideout-menu',
+    properties: {
+      tolerance: {
+        type: Number,
+        value: 70
+      },
+      duration: {
+        type: Number,
+        value: 300
+      },
+      fx: {
+        type: String,
+        value: 'ease'
+      },
+      padding: {
+        type: Number,
+        value: 256
+      },
+      tolerance: {
+        type: Number,
+        value: 70
+      },
+      touch: {
+        type: Boolean,
+        value: true
+      },
+      side: {
+        type: String,
+        value: 'left'
+      }
+    },
+    ready: function () {
+      var panel = Polymer.dom(this.$.panel).getDistributedNodes()[0];
+      var menu = Polymer.dom(this.$.menu).getDistributedNodes()[0];
+      this.slideout = new Slideout({
+        panel: panel,
+        menu: menu,
+        duration: this.duration,
+        fx: this.fx,
+        padding: this.padding,
+        tolerance: this.tolerance,
+        touch: this.touch,
+        side: this.side
+      });
+    },
+    toggle: function () {
+      this.slideout.toggle();
+    }
+  });
+</script>
