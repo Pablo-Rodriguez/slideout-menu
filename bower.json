@@ -1,0 +1,30 @@
+{
+  "name": "slideout-menu",
+  "homepage": "https://github.com/Pablo-Rodriguez/slideout-menu",
+  "authors": [
+    "Pablo-Rodriguez <pablorp1996@gmail.com>"
+  ],
+  "description": "A Polymer web component for the slideout.js library",
+  "main": "slideout-menu.html",
+  "moduleType": [],
+  "keywords": [
+    "slideout",
+    "menu",
+    "nav",
+    "polymer",
+    "web",
+    "component"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "~1.2.3",
+    "slideout.js": "~0.1.11"
+  }
+}
